@@ -12,7 +12,7 @@ buildscript {
 
     dependencies {
         classpath("com.android.tools.build:gradle:4.1.2")
-        classpath("io.deepmedia.tools:publisher:0.4.1")
+        classpath("io.deepmedia.tools:publisher:0.5.0")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21")
     }
 }
