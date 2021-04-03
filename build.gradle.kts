@@ -5,7 +5,7 @@ buildscript {
     extra["targetSdkVersion"] = 30
 
     repositories {
-        maven(url "https://plugins.gradle.org/m2/")
+        maven("https://plugins.gradle.org/m2/")
         mavenCentral()
         google()
         gradlePluginPortal()
@@ -19,7 +19,7 @@ buildscript {
 
 allprojects {
     repositories {
-        maven(url "https://plugins.gradle.org/m2/")
+        maven("https://plugins.gradle.org/m2/")
         mavenCentral()
         google()
     }
