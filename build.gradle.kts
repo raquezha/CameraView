@@ -1,4 +1,3 @@
-
 buildscript {
 
     extra["minSdkVersion"] = 15
@@ -22,6 +21,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://maven.google.com' }
     }
 }
 
