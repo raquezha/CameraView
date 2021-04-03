@@ -20,6 +20,7 @@ buildscript {
 allprojects {
     repositories {
         maven("https://plugins.gradle.org/m2/")
+        maven( "https://jitpack.io")
         mavenCentral()
         google()
     }
