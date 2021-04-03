@@ -1,10 +1,6 @@
-import io.deepmedia.tools.publisher.common.License
-import io.deepmedia.tools.publisher.common.Release
-
 plugins {
     id("com.android.library")
     id("kotlin-android")
-    id("io.deepmedia.tools.publisher")
     id("jacoco")
 }
 
@@ -25,43 +21,43 @@ android {
 }
 
 dependencies {
-    testImplementation("junit:junit:4.13")
-    testImplementation("org.mockito:mockito-inline:2.28.2")
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.mockito:mockito-inline:3.8.0")
 
     androidTestImplementation("androidx.test:runner:1.3.0")
     androidTestImplementation("androidx.test:rules:1.3.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("org.mockito:mockito-android:2.28.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
 
     api("androidx.exifinterface:exifinterface:1.3.2")
-    api("androidx.lifecycle:lifecycle-common:2.2.0")
-    api("com.google.android.gms:play-services-tasks:17.2.0")
-    implementation("androidx.annotation:annotation:1.1.0")
-    implementation("com.otaliastudios.opengl:egloo-android:0.6.0")
+    api("androidx.lifecycle:lifecycle-common:2.3.1")
+    api("com.google.android.gms:play-services-tasks:17.2.1")
+    implementation("androidx.annotation:annotation:1.2.0")
+    implementation("com.otaliastudios.opengl:egloo:0.6.0")
 }
 
 // Publishing
-
-publisher {
-    project.description = "A well documented, high-level Android interface that makes capturing " +
-            "pictures and videos easy, addressing all of the common issues and needs. " +
-            "Real-time filters, gestures, watermarks, frame processing, RAW, output of any size."
-    project.artifact = "cameraview"
-    project.group = "com.otaliastudios"
-    project.url = "https://github.com/natario1/CameraView"
-    project.addLicense(License.APACHE_2_0)
-    bintray {
-        release.sources = Release.SOURCES_AUTO
-        release.docs = Release.DOCS_AUTO
-        auth.user = "BINTRAY_USER"
-        auth.key = "BINTRAY_KEY"
-        auth.repo = "BINTRAY_REPO"
-    }
-    directory {
-        directory = file(repositories.mavenLocal().url).absolutePath
-    }
-}
+//
+//publisher {
+//    project.description = "A well documented, high-level Android interface that makes capturing " +
+//            "pictures and videos easy, addressing all of the common issues and needs. " +
+//            "Real-time filters, gestures, watermarks, frame processing, RAW, output of any size."
+//    project.artifact = "cameraview"
+//    project.group = "com.otaliastudios"
+//    project.url = "https://github.com/natario1/CameraView"
+//    project.addLicense(License.APACHE_2_0)
+//    bintray {
+//        release.sources = Release.SOURCES_AUTO
+//        release.docs = Release.DOCS_AUTO
+//        auth.user = "BINTRAY_USER"
+//        auth.key = "BINTRAY_KEY"
+//        auth.repo = "BINTRAY_REPO"
+//    }
+//    directory {
+//        directory = file(repositories.mavenLocal().url).absolutePath
+//    }
+//}
 
 // Code Coverage
 val buildDir = project.buildDir.absolutePath
