@@ -5,23 +5,23 @@ buildscript {
     extra["targetSdkVersion"] = 30
 
     repositories {
-        google()
+        maven(url "https://plugins.gradle.org/m2/")
         mavenCentral()
+        google()
         gradlePluginPortal()
     }
 
     dependencies {
         classpath("com.android.tools.build:gradle:4.1.3")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.32")
-
     }
 }
 
 allprojects {
     repositories {
-        google()
+        maven(url "https://plugins.gradle.org/m2/")
         mavenCentral()
-        maven("https://maven.google.com")
+        google()
     }
 }
 
