@@ -24,6 +24,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.util.*
 
+@Suppress("UNCHECKED_CAST")
 class CameraActivity : AppCompatActivity(), View.OnClickListener, OptionView.Callback {
 
     companion object {
@@ -290,6 +291,7 @@ class CameraActivity : AppCompatActivity(), View.OnClickListener, OptionView.Cal
 
     private fun toggleCamera() {
         if (camera.isTakingPicture || camera.isTakingVideo) return
+        @Suppress("WHEN_ENUM_CAN_BE_NULL_IN_JAVA")
         when (camera.toggleFacing()) {
             Facing.BACK -> message("Switched to back camera!", false)
             Facing.FRONT -> message("Switched to front camera!", false)
