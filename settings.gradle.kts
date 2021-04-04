@@ -1,2 +1,2 @@
 include(":cameraview")
-include(":demo")
+//include(":demo")
