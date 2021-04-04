@@ -1,14 +1,9 @@
 buildscript {
 
-    extra["minSdkVersion"] = 15
-    extra["compileSdkVersion"] = 30
-    extra["targetSdkVersion"] = 30
-
     repositories {
         maven("https://plugins.gradle.org/m2/")
         mavenCentral()
         google()
-        gradlePluginPortal()
     }
 
     dependencies {
@@ -19,7 +14,6 @@ buildscript {
 
 allprojects {
     repositories {
-        maven("https://plugins.gradle.org/m2/")
         maven( "https://jitpack.io")
         mavenCentral()
         google()
