@@ -5,10 +5,10 @@ plugins {
 }
 
 android {
-    setCompileSdkVersion(property("compileSdkVersion") as Int)
+    setCompileSdkVersion(30)
     defaultConfig {
-        setMinSdkVersion(property("minSdkVersion") as Int)
-        setTargetSdkVersion(property("targetSdkVersion") as Int)
+        setMinSdkVersion(15)
+        setTargetSdkVersion(30)
         versionCode = 1
         versionName = "2.7.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
